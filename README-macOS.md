@@ -51,17 +51,13 @@ The app keeps its writable data — config, save files, logs, and `mods/` — in
 first run. (Set via the bundle's `LSEnvironment SHIP_HOME` plus a matching fallback in code, so it
 also works when launched from a terminal.)
 
-## Releases & prebuilt build
-Like upstream, **no build here contains game assets** — you supply your own ROM at run time.
+## Getting the game
 
-- **Prebuilt binary:** download `Starship-v2.0.0-macOS-arm64.zip` from the
-  [Releases page](https://github.com/quarrel07/Starship-macOS/releases), unzip, and move `Starship.app` to
-  your Applications folder. Apple Silicon only. The build is ad-hoc signed, so the first time you open
-  it, right-click the app → **Open** to get past Gatekeeper. On first launch it asks for your Star
-  Fox 64 ROM and extracts the assets into `~/Library/Application Support/com.starship`.
-- **Versioning:** releases track upstream — `vX.Y.Z-macos` is the macOS build of upstream `vX.Y.Z`.
-  This release (`v2.0.0-macos`) is built from the latest upstream sources, so it may be slightly
-  ahead of upstream's own prebuilt binaries.
+No builds are published from this fork. The official game is at the [upstream releases](https://github.com/HarbourMasters/Starship/releases). To run the fork's branch, build it as below.
+
+On first run the game asks for your **Star Fox 64 ROM** and extracts the assets into `~/Library/Application Support/com.starship/`.
+
+No copyrighted assets are bundled. You must supply your own legally-dumped ROM.
 
 ## Building from source
 Prerequisites (Homebrew): `cmake ninja sdl2 sdl3 libpng glew libzip nlohmann-json tinyxml2 spdlog
@@ -69,7 +65,7 @@ vorbis-tools`, plus the Xcode command-line tools. (`sdl3` is needed because mode
 is **sdl2-compat**, a shim that loads SDL3 at runtime; SDL3 is also bundled into the `.app`.) Then:
 
 ```bash
-git clone --recurse-submodules https://github.com/quarrel07/Starship-macOS.git
+git clone --recurse-submodules https://github.com/quarrel07/Starship.git
 cd Starship
 cmake -H. -Bbuild-cmake -GNinja -DCMAKE_BUILD_TYPE=Release
 cmake --build build-cmake            # -> build-cmake/Starship.app
