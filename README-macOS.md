@@ -1,7 +1,7 @@
 # Starship — macOS build
 
 <p align="center">
-  <img src="docs/preview/app-icon.png" width="160" alt="Starship.app icon on macOS">
+  <img src="docs/preview/liquid-glass-macos27.png" width="160" alt="Liquid Glass icon (macOS 27)">
   <br>
   <sub><b>Starship.app</b> on macOS</sub>
 </p>

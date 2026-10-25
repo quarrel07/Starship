@@ -1,6 +1,6 @@
 <!-- ===== macOS build fork banner (this fork only) ===== -->
 <p align="center">
-  <img src="docs/preview/app-icon.png" width="140" alt="Starship.app icon on macOS">
+  <img src="docs/preview/liquid-glass-macos27.png" width="140" alt="Liquid Glass icon (macOS 27)">
 </p>
 
 > ## 🍎 macOS build
